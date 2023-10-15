@@ -1,0 +1,500 @@
+/**
+ * Copyright 2020 The Coding with Chrome Authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Blockly custom CSS definitions.
+ * @author mbordihn@google.com (Markus Bordihn)
+ */
+
+.blocklySvg {
+  background-color: #eceff1 !important;
+}
+
+.blocklyHtmlInput {
+  font-size: 11pt !important;
+}
+
+.blocklyFlyoutBackground {
+  fill: #cfd8dc !important;
+}
+
+.blocklyScrollbarBackground {
+  opacity: 1 !important;
+  fill: #eceff1;
+  stroke: #cfd8dc;
+  stroke-width: 1;
+}
+
+.blocklyScrollbarKnob {
+  fill: #90a4ae !important;
+}
+
+.blocklyScrollbarBackground:hover + .blocklyScrollbarKnob,
+.blocklyScrollbarKnob:hover {
+  fill: #78909c !important;
+}
+
+.blocklyText {
+  font-family: inherit !important;
+  font-size: 14px !important;
+}
+
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-accel,
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content {
+  color: #ccc !important;
+}
+
+.blocklyWidgetDiv .goog-menu,
+.blocklyWidgetDiv .goog-menuitem,
+.blocklyWidgetDiv .goog-menuitem-content {
+  font-family: inherit !important;
+  font-size: 14px !important;
+}
+
+.blocklyTreeLabel {
+  cursor: pointer !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  padding: 0 0px 0 5px !important;
+}
+
+.blocklyTreeRowContentContainer {
+  line-height: 15px;
+}
+
+.blocklyToolboxDiv {
+  background-color: rgba(200, 200, 200, 0.5);
+  background: linear-gradient(
+    to right,
+    rgba(200, 200, 200, 0.5) 0%,
+    rgba(200, 200, 200, 0.5) 90%,
+    rgba(200, 200, 200, 0.1) 95%,
+    rgba(200, 200, 200, 0) 100%
+  );
+  min-width: 140px;
+}
+
+.blocklyToolboxDiv::before {
+  bottom: 0;
+  color: rgba(128, 128, 128, 0.5);
+  content: 'delete';
+  font-family: 'Material Icons';
+  font-size: 128px;
+  font-style: normal;
+  left: 10px;
+  line-height: 1;
+  position: absolute;
+  z-index: -1;
+}
+
+.blocklyToolboxDiv [role='treeitem'] [role='group'] {
+  padding-left: 32px;
+}
+
+.blocklyTreeIcon {
+  background-image: none !important;
+}
+
+.blocklyTreeIcon.blocklyTreeIconClosed,
+.blocklyTreeIcon.blocklyTreeIconClosedLtr,
+.blocklyTreeIcon.blocklyTreeIconOpen,
+.blocklyTreeIcon.blocklyTreeIconNone {
+  background: none;
+  color: #ccc;
+  position: relative;
+  left: 2px;
+}
+
+.blocklyTreeIcon.blocklyTreeIconClosed,
+.blocklyTreeIcon.blocklyTreeIconClosedLtr {
+  transform: rotate(270deg);
+  top: 3px;
+}
+
+.blocklyTreeIcon.blocklyTreeIconClosed::before,
+.blocklyTreeIcon.blocklyTreeIconClosedLtr::before,
+.blocklyTreeIcon.blocklyTreeIconOpen::before {
+  position: absolute;
+  color: inherit;
+  content: 'arrow_drop_down';
+  font-family: 'Material Icons';
+  font-size: 24px;
+}
+
+.blocklyTreeIcon.blocklyTreeIconOpen::before {
+  color: inherit;
+  left: -3px;
+}
+
+.blocklyRootTreeRowItem > .blocklyTreeRow {
+  border-left-width: 48px !important;
+}
+
+.blocklyTreeRoot {
+  margin-bottom: 3px;
+  padding: 2px 0 0 0;
+  padding-top: 0;
+}
+
+.blocklyTreeRoot > .blocklyTreeRow {
+  border-radius: 0 22px 22px 0;
+  margin-bottom: 0;
+}
+
+.blocklyTreeRoot.expanded > .blocklyTreeRow {
+  border-radius: 0 22px 0 0;
+}
+
+.blocklyTreeRoot > .blocklyToolboxContents .blocklyTreeIcon {
+  display: none !important;
+}
+
+.blocklyTreeRoot > .blocklyToolboxContents .blocklyTreeRow {
+  border-radius: 5px;
+}
+
+.blocklyTreeRoot.expanded .blocklyToolboxContents {
+  margin-top: 3px;
+}
+
+.blocklyTreeRoot.expanded {
+  padding: 0;
+}
+
+.blocklyTreeRow {
+  padding: 4px 10px 4px 0px !important;
+  background-color: #fafafa;
+  box-shadow: 0 4px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 22px 22px 0;
+  border-left-width: 28px !important;
+  height: 24px;
+}
+
+.blocklyTreeRow:not(.blocklyTreeSelected):hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.blocklyTreeRow:hover .blocklyTreeLabel {
+  text-shadow: 0.5px 0px 0px black;
+}
+
+.blocklyTreeRowItem {
+  position: relative;
+}
+
+.blocklyRootTreeRowItem::before {
+  left: 21px !important;
+}
+
+.blocklyTreeRowItem::before {
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Material Icons';
+  font-style: normal;
+  line-height: 1;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 21px;
+  height: 21px;
+}
+
+.blocklyTreeRowItem_sprites > .blocklyTreeRow {
+  border-left: 0 !important;
+  padding-left: 8px !important;
+}
+
+.blocklyToolboxContents .icon_access_time,
+.blocklyToolboxContents .icon_add_circle,
+.blocklyToolboxContents .icon_attach_money,
+.blocklyToolboxContents .icon_audiotrack,
+.blocklyToolboxContents .icon_boy,
+.blocklyToolboxContents .icon_brush,
+.blocklyToolboxContents .icon_burst_mode,
+.blocklyToolboxContents .icon_call_split,
+.blocklyToolboxContents .icon_category,
+.blocklyToolboxContents .icon_computer,
+.blocklyToolboxContents .icon_desktop_windows,
+.blocklyToolboxContents .icon_developer_board,
+.blocklyToolboxContents .icon_direction_run,
+.blocklyToolboxContents .icon_directions_car,
+.blocklyToolboxContents .icon_oil_barrel,
+.blocklyToolboxContents .icon_extension,
+.blocklyToolboxContents .icon_file_download,
+.blocklyToolboxContents .icon_folder,
+.blocklyToolboxContents .icon_format_shapes,
+.blocklyToolboxContents .icon_functions,
+.blocklyToolboxContents .icon_gamepad,
+.blocklyToolboxContents .icon_group_work,
+.blocklyToolboxContents .icon_input,
+.blocklyToolboxContents .icon_insert_photo,
+.blocklyToolboxContents .icon_iso,
+.blocklyToolboxContents .icon_keyboard,
+.blocklyToolboxContents .icon_border_bottom,
+.blocklyToolboxContents .icon_border_top,
+.blocklyToolboxContents .icon_lightbulb_outline,
+.blocklyToolboxContents .icon_list,
+.blocklyToolboxContents .icon_loop,
+.blocklyToolboxContents .icon_low_priority,
+.blocklyToolboxContents .icon_open_with,
+.blocklyToolboxContents .icon_palette,
+.blocklyToolboxContents .icon_perm_media,
+.blocklyToolboxContents .icon_portrait,
+.blocklyToolboxContents .icon_repeat,
+.blocklyToolboxContents .icon_rotate_90_degrees_ccw,
+.blocklyToolboxContents .icon_rv_hookup,
+.blocklyToolboxContents .icon_send,
+.blocklyToolboxContents .icon_settings_input_component,
+.blocklyToolboxContents .icon_sports_soccer,
+.blocklyToolboxContents .icon_sports_cricket,
+.blocklyToolboxContents .icon_text_fields,
+.blocklyToolboxContents .icon_wallpaper {
+  position: relative;
+}
+
+.blocklyToolboxContents .icon_access_time::before,
+.blocklyToolboxContents .icon_add_circle::before,
+.blocklyToolboxContents .icon_attach_money::before,
+.blocklyToolboxContents .icon_audiotrack::before,
+.blocklyToolboxContents .icon_boy::before,
+.blocklyToolboxContents .icon_brush::before,
+.blocklyToolboxContents .icon_burst_mode::before,
+.blocklyToolboxContents .icon_call_split::before,
+.blocklyToolboxContents .icon_category::before,
+.blocklyToolboxContents .icon_computer::before,
+.blocklyToolboxContents .icon_desktop_windows::before,
+.blocklyToolboxContents .icon_developer_board::before,
+.blocklyToolboxContents .icon_direction_run::before,
+.blocklyToolboxContents .icon_directions_car::before,
+.blocklyToolboxContents .icon_oil_barrel::before,
+.blocklyToolboxContents .icon_extension::before,
+.blocklyToolboxContents .icon_file_download::before,
+.blocklyToolboxContents .icon_folder::before,
+.blocklyToolboxContents .icon_format_shapes::before,
+.blocklyToolboxContents .icon_functions::before,
+.blocklyToolboxContents .icon_gamepad::before,
+.blocklyToolboxContents .icon_group_work::before,
+.blocklyToolboxContents .icon_input::before,
+.blocklyToolboxContents .icon_insert_photo::before,
+.blocklyToolboxContents .icon_iso::before,
+.blocklyToolboxContents .icon_keyboard::before,
+.blocklyToolboxContents .icon_border_bottom::before,
+.blocklyToolboxContents .icon_border_top::before,
+.blocklyToolboxContents .icon_lightbulb_outline::before,
+.blocklyToolboxContents .icon_list::before,
+.blocklyToolboxContents .icon_loop::before,
+.blocklyToolboxContents .icon_low_priority::before,
+.blocklyToolboxContents .icon_open_with::before,
+.blocklyToolboxContents .icon_palette::before,
+.blocklyToolboxContents .icon_perm_media::before,
+.blocklyToolboxContents .icon_portrait::before,
+.blocklyToolboxContents .icon_repeat::before,
+.blocklyToolboxContents .icon_rotate_90_degrees_ccw::before,
+.blocklyToolboxContents .icon_rv_hookup::before,
+.blocklyToolboxContents .icon_send::before,
+.blocklyToolboxContents .icon_settings_input_component::before,
+.blocklyToolboxContents .icon_sports_soccer::before,
+.blocklyToolboxContents .icon_sports_cricket::before,
+.blocklyToolboxContents .icon_text_fields::before,
+.blocklyToolboxContents .icon_wallpaper::before {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Material Icons';
+  font-size: 20px;
+  left: 4px;
+  top: 2px;
+  position: absolute;
+}
+
+.blocklyToolboxContents .icon_access_time::before {
+  content: 'access_time';
+}
+
+.blocklyToolboxContents .icon_attach_money::before {
+  content: 'attach_money';
+}
+
+.blocklyToolboxContents .icon_boy::before {
+  content: 'boy';
+}
+
+.blocklyToolboxContents .icon_brush::before {
+  content: 'brush';
+}
+
+.blocklyToolboxContents .icon_call_split::before {
+  content: 'call_split';
+}
+
+.blocklyToolboxContents .icon_category::before {
+  content: 'category';
+}
+
+.blocklyToolboxContents .icon_computer::before {
+  content: 'computer';
+}
+
+.blocklyToolboxContents .icon_desktop_windows::before {
+  content: 'desktop_windows';
+}
+
+.blocklyToolboxContents .icon_developer_board::before {
+  content: 'developer_board';
+}
+
+.blocklyToolboxContents .icon_directions_car::before {
+  content: 'directions_car';
+}
+
+.blocklyToolboxContents .icon_extension::before {
+  content: 'extension';
+}
+
+.blocklyToolboxContents .icon_folder::before {
+  content: 'folder';
+}
+
+.blocklyToolboxContents .icon_format_shapes::before {
+  content: 'format_shapes';
+}
+
+.blocklyToolboxContents .icon_functions::before {
+  content: 'functions';
+}
+
+.blocklyToolboxContents .icon_gamepad::before {
+  content: 'gamepad';
+}
+
+.blocklyToolboxContents .icon_group_work::before {
+  content: 'group_work';
+}
+
+.blocklyToolboxContents .icon_input::before {
+  content: 'input';
+}
+
+.blocklyToolboxContents .icon_insert_photo::before {
+  content: 'insert_photo';
+}
+
+.blocklyToolboxContents .icon_iso::before {
+  content: 'iso';
+}
+
+.blocklyToolboxContents .icon_keyboard::before {
+  content: 'keyboard';
+}
+
+.blocklyToolboxContents .icon_border_bottom:before {
+  content: 'border_bottom';
+}
+
+.blocklyToolboxContents .icon_border_top::before {
+  content: 'border_top';
+}
+
+.blocklyToolboxContents .icon_lightbulb_outline::before {
+  content: 'lightbulb_outline';
+}
+
+.blocklyToolboxContents .icon_list::before {
+  content: 'list';
+}
+
+.blocklyToolboxContents .icon_loop::before {
+  content: 'loop';
+}
+
+.blocklyToolboxContents .icon_low_priority::before {
+  content: 'low_priority';
+}
+
+.blocklyToolboxContents .icon_open_with::before {
+  content: 'open_with';
+}
+
+.blocklyToolboxContents .icon_palette::before {
+  content: 'palette';
+}
+
+.blocklyToolboxContents .icon_perm_media::before {
+  content: 'perm_media';
+}
+
+.blocklyToolboxContents .icon_repeat::before {
+  content: 'repeat';
+}
+
+.blocklyToolboxContents .icon_rv_hookup::before {
+  content: 'rv_hookup';
+}
+
+.blocklyToolboxContents .icon_send::before {
+  content: 'send';
+}
+
+.blocklyToolboxContents .icon_settings_input_component::before {
+  content: 'settings_input_component';
+}
+
+.blocklyToolboxContents .icon_sports_soccer::before {
+  content: 'sports_soccer';
+}
+
+.blocklyToolboxContents .icon_text_fields::before {
+  content: 'text_fields';
+}
+
+.blocklyToolboxContents .icon_add_circle::before {
+  content: 'add_circle';
+}
+
+.blocklyToolboxContents .icon_direction_run::before {
+  content: 'directions_run';
+}
+
+.blocklyToolboxContents .icon_file_download::before {
+  content: 'file_download';
+}
+
+.blocklyToolboxContents .icon_audiotrack::before {
+  content: 'audiotrack';
+}
+
+.blocklyToolboxContents .icon_portrait::before {
+  content: 'portrait';
+}
+
+.blocklyToolboxContents .icon_burst_mode::before {
+  content: 'burst_mode';
+}
+
+.blocklyToolboxContents .icon_rotate_90_degrees_ccw::before {
+  content: 'rotate_90_degrees_ccw';
+}
+
+.blocklyToolboxContents .icon_wallpaper::before {
+  content: 'wallpaper';
+}
+
+.blocklyToolboxContents .icon_oil_barrel::before {
+  content: 'oil_barrel';
+}
+
+.blocklyToolboxContents .icon_sports_cricket::before {
+  content: 'sports_cricket';
+}
